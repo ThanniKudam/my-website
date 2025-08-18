@@ -1,0 +1,56 @@
+"use client" // required for useState/useEffect
+
+import { useEffect, useState } from "react"
+import { Header } from "@/components/header"
+
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:!?()[]{}<>@#$%^&*-_+="
+
+const scrambleChar = (target: string, progress: number) => {
+  return target
+    .split("")
+    .map((c, i) => {
+      if (i < progress) return c
+      if (c === " " || c === "\n") return c
+      return chars[Math.floor(Math.random() * chars.length)]
+    })
+    .join("")
+}
+
+export default function HomePage() {
+  const [displayText, setDisplayText] = useState("")
+  const quote = `தனிக்குடி யானும் தலைவன்; தலைவன் அல்லான் தனிக்குடி யானும் அல்லன்.
+Even a man alone is a chief if he stands firm; but a chief who cannot stand firm is no man at all.`
+
+  useEffect(() => {
+    let progress = 0
+    const interval = setInterval(() => {
+      if (progress <= quote.length) {
+        setDisplayText(scrambleChar(quote, progress))
+        progress++
+      } else clearInterval(interval)
+    }, 30)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+
+      <main className="flex-1 flex items-end justify-center pb-20 pt-20">
+        <div className="text-center space-y-4">
+          <div className="space-y-2">
+            <div className="reversed-text text-xs">WINDOWS 0-DAY RESEARCH</div>
+            <div className="reversed-text text-xs">VULNERABILITY ANALYSIS</div>
+            <div className="reversed-text text-xs">EXPLOIT DEVELOPMENT</div>
+          </div>
+
+          {/* New quote block */}
+          <div className="mt-6 text-white text-sm md:text-lg lg:text-xl font-semibold">
+            <pre className="whitespace-pre-wrap">{displayText}</pre>
+          </div>
+        </div>
+      </main>
+    </div>
+  )
+}
+
