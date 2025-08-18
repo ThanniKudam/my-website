@@ -16,7 +16,7 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "ZeroDayLab - Windows 0-Day Research",
+  title: "WaterBucket - Windows 0-Day Research",
   description: "Personal cybersecurity blog focused on Windows 0-day research and vulnerability analysis",
   generator: "v0.app",
 }
