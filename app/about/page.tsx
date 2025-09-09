@@ -33,7 +33,7 @@ export default function AboutPage() {
               TWITTER
             </a>
             <a
-              href="https://github.com/Dharani-sanjaiy"
+              href="https://github.com/thannikudam"
               target="_blank"
               rel="noopener noreferrer"
               className="reversed-text hover:opacity-70 transition-opacity"
