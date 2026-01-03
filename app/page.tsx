@@ -18,7 +18,7 @@ const scrambleChar = (target: string, progress: number) => {
 
 export default function HomePage() {
   const [displayText, setDisplayText] = useState("")
-  const quote = `I am the throne that no god may claim; my fury bends worlds, and none survive my gaze.`
+  const quote = `தெய்வத்தான் ஆகா தெனினும் முயற்சிதன், மெய்வருத்தக் கூலி தரும்.`
 
   useEffect(() => {
     let progress = 0
