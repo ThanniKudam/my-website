@@ -25,7 +25,7 @@ export default function AboutPage() {
 
           <div className="flex justify-center space-x-6 text-xs">
             <a
-              href="https://twitter.com/DharaniSanjaiy"
+              href="https://x.com/windeebug"
               target="_blank"
               rel="noopener noreferrer"
               className="reversed-text hover:opacity-70 transition-opacity"
