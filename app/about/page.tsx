@@ -8,12 +8,11 @@ export default function AboutPage() {
       <main className="flex-1 flex items-center justify-center px-8">
         <div className="text-center space-y-8 max-w-2xl">
           <div className="space-y-4">
-            <div className="reversed-text text-xs">Pretending to be a Vulnerability Researcher</div>
-            <div className="reversed-text text-xs">ALL THINGS WINDOWS!</div>
+            <div className="reversed-text text-xs"> Windows & AI/ML security </div>
           </div>
 
           <div className="space-y-3 text-xs text-white font-mono">
-            <p>Just another Security Researcher deeply interested in Windows Internals,</p>
+            <p>idk, interested in Windows Internals, AI/ML,</p>
             <p>Active Directory Security, Malware Development, RootKits,</p>
             <p>Reverse engineering, Exploit Development & Red Teaming.</p>
           </div>
